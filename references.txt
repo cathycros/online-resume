@@ -1,0 +1,10 @@
+Cathy Crosman - Front-End Web Developer Nanodegree
+Project 2 - Online Resume
+Resources
+
+https://developers.google.com/maps/documentation/javascript/
+
+http://api.jquery.com/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/
+

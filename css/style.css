@@ -1,3 +1,4 @@
+/* customizations to existing styles indicated throughout with following note: */ /* cc */
 * {
   padding:0;
   margin:0;
@@ -11,6 +12,7 @@
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 1%; /* cc */
 }
 
 h1 {
@@ -88,6 +90,7 @@ a {
 
 #skillsH3 {
   color: #F5AE23;
+  margin-top:20px; /* cc */
   display: none;
 }
 
@@ -215,9 +218,23 @@ span {
 }
 
 /*  Styles added by Cathy Crosman for Online Resume customization */
+ul#skills {
+  list-style-type: disc;
+  display: block;
+  margin-left:120px;
+}
+
+ul#skills li {
+  margin-left:120px;
+}
+
 #infoWin {
   width: 120px;
   color: #F7A502;
   border: 1px solid #F7A502;
   padding: 5px 5px 5px 10px;
+}
+
+#topContacts {
+  margin-bottom:20px;
 }

@@ -121,7 +121,7 @@ var projects = {
 			"title": "Orange Udacity Mug",
 			"dates": "2015",
 			"description": "Web page created from pdf mock, written using Bootstrap and optimized for responsiveness",
-			"images": [ "images/mock-to-web.png", "images/responsive-structure.png"]
+			"images": ["images/mock-to-web.png", "images/responsive-structure.png"]
 		}
 	],
 	display : function() {
@@ -161,7 +161,7 @@ var education = {
 			"url": "#"
 		}
 	],
-	// I chose to write individual 'display' functions for the schools and online courses because it seemed more organized to me, and it was easier for me to work with
+	/* I chose to write individual 'display' functions for the schools and online courses because it seemed more organized to me, and it was easier for me to work with */
 	displaySchools: function () {
 		for (school in this.schools) {
 			$("#education").append(HTMLschoolStart);
@@ -205,7 +205,7 @@ var education = {
 			"url": "https://www.udacity.com/course/ud304-nd"
 		}
 	],
-	// My 'display' function for the online courses data
+	/* My 'display' function for the online courses data */
 	displayOnlineCourses: function () {
 		if (this.onlineCourses.length > 0) {
 			$("#education").append(HTMLonlineClasses);
@@ -217,12 +217,14 @@ var education = {
 				$(".education-entry:last").append(formattedTitleSchool);
 				var formattedDates = HTMLonlineDates.replace("%data%",this.onlineCourses[course].dates);
 				$(".education-entry:last").append(formattedDates);
-				var formattedUrl = HTMLonlineURL.replace("%data%",this.onlineCourses[course].url).replace("%url%",this.onlineCourses[course].url);
-				$(".education-entry:last").append(formattedUrl);
+				/* I chose note to display the formatted url as I think it detracts from the information being presented */
+				/*  and the course title is clickable; however, the 2 lines below, if uncommented, would display the info */
+				// var formattedUrl = HTMLonlineURL.replace("%data%",this.onlineCourses[course].url).replace("%url%",this.onlineCourses[course].url);
+				// $(".education-entry:last").append(formattedUrl);
 			}
 		}
 	},
-	// And a 'combined' display function to call the individual school and online courses display functions - this will simplify the call we need to make outside of the object to display the data on the web page
+	/* And a 'combined' display function to call the individual school and online courses display functions - this will simplify the call we need to make outside of the object to display the data on the web page */
 	display: function () {
 		this.displaySchools();
 		this.displayOnlineCourses();
